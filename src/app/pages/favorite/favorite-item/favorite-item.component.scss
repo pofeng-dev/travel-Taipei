@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    width: 100%;
+    span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        border: 1px solid #000000;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    input {
+        &.warn {
+            border: 1px solid #f80000;
+        }
+    }
+}
+.edit-btn {
+    background-color: #207138;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover {
+        background-color: #409b5b;
+    }
+}

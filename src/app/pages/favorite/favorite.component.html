@@ -1,0 +1,6 @@
+<div class="title">
+    <span>我的最愛</span>
+</div>
+<div class="favorite-table-container" *ngFor="let d of data.favorite">
+    <app-favorite-item [setData]="d"></app-favorite-item>
+</div>

@@ -1,0 +1,14 @@
+<from [formGroup]="optionForm" class="form">
+    <span>
+        <input type="text" type="checkbox" name="" id="" #checkbox [checked]="true" (click)="toSave($event, checkbox)">
+    </span>
+    <span>
+        <input type="text" formControlName="name" [ngClass]="{'warn': !optionForm.controls['name'].valid}">
+    </span>
+    <span>
+        <input type="text" formControlName="tel" [ngClass]="{'warn': !optionForm.controls['tel'].valid}">
+    </span>
+    <span (click)="toEdit()">
+        <div class="edit-btn">修改</div>
+    </span>
+</from>

@@ -1,0 +1,53 @@
+$mobileSize: 768px;
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    color: #535552;
+    span {
+        border-bottom: 2px solid #535552;
+    }
+}
+.table-option {
+    width: 100%;
+    display: flex;
+    padding: 10px 20px;
+}
+form {
+    width: 100%;
+    display: flex;
+    .form-item:not(:last-child){
+        padding-right: 20px;
+    }
+}
+.attractions-table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    .attractions-table-line {
+        width: 100%;
+        display: flex;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000000;
+            flex: 1;
+            padding: 2px;
+        }
+    }
+}
+.mobile-hide {
+    @media(max-width: $mobileSize) {
+        display: none !important;
+    }
+}

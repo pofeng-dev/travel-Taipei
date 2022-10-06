@@ -1,0 +1,51 @@
+<h1 class="title">
+    <span>
+        景點列表
+    </span>
+</h1>
+<div class="table-option">
+    <form action="" [formGroup]="optionForm">
+        <div class="form-item">
+            <span>
+                categoryIds:
+            </span>
+            <span>
+                <select name="" id="" formControlName="categoryIds">
+                    <option value="all">All</option>
+                    <option [value]="d" *ngFor="let d of data.categoryIds">{{d}}</option>
+                </select>
+            </span>
+        </div>
+        <div class="form-item">
+            <span>頁數：</span>
+            <span>
+                <select name="" id="" formControlName="page">
+                    <option [value]="d" *ngFor="let d of data.totalPage">第{{d}}頁</option>
+                </select>
+            </span>
+        </div>
+    </form>
+    <div>{{state.page}}/{{data.totalPage.length}}</div>
+</div>
+<div class="attractions-table">
+    <div class="attractions-table-line" >
+        <span>save</span>
+        <span>name</span>
+        <span class="mobile-hide">address</span>
+        <span>open_time</span>
+        <span class="mobile-hide">tel</span>
+        <span class="mobile-hide">URL</span>
+    </div>
+    <div class="attractions-table-line" *ngFor="let d of data.attractions">
+        <span> 
+            <input type="checkbox" #checkbox [checked]="d.favorite" (click)="toSave($event, checkbox, d)">
+        </span>
+        <span>{{d.name}}</span>
+        <span class="mobile-hide">{{d.address}}</span>
+        <span>{{d.open_time}}</span>
+        <span class="mobile-hide">{{d.tel}}</span>
+        <span class="mobile-hide">
+            <a [href]="d.url" target="_blank">URL</a>
+        </span>
+    </div>
+</div>
